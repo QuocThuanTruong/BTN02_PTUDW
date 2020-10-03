@@ -1,0 +1,39 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.back-ground {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.back-ground
+.sub-right {
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    max-width: 864px;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    background:#97F9E3; 
+}
+
+.back-ground
+.sub-left {
+    clip-path: polygon(0 75%, 100% 100%, 100% 100%, 0% 100%);
+    max-width: 874px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background:#97F9E3; 
+    position: absolute;
+}
