@@ -1,3 +1,25 @@
+@charset "utf-8";
+
+/*===========================
+ =  Table of CSS
+
+	1. General code
+		1.1. Typography
+
+	2. Background
+    
+    3. Default page
+
+    4. Members page
+
+===========================*/
+
+
+
+/*====================
+	1. General code
+==========================*/
+
 html,
 body {
     height: 100%;
@@ -5,6 +27,26 @@ body {
     margin: 0;
     overflow: hidden;
 }
+
+
+
+/*----------------------
+	1.1. Typography
+------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+	margin:0px;
+    padding:0px !important;
+    color: #191919;
+}
+
+
+
+/*====================
+	2. BackGround
+==========================*/
 
 .back-ground {
     position: absolute;
