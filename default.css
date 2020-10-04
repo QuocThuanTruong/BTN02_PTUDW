@@ -189,17 +189,14 @@ h1, h2, h3, h4, h5, h6 {
         }
 
 .Tuan-info {
-    display: block;
     opacity: 1;
 }
 
 .Thuc-info {
-    display: block;
     opacity: 1;
 }
 
 .Thuan-info {
-    display: block;
     opacity: 1;
 }
 
@@ -263,8 +260,9 @@ h1, h2, h3, h4, h5, h6 {
 .default-page
     .image-in-homepage
         .flag-man {
+			z-index: 10;
             position: absolute;
-            z-index: 100;
+            
             margin-left: 17.5rem;
             margin-top: -33rem;
         }
@@ -285,8 +283,8 @@ h1, h2, h3, h4, h5, h6 {
 	3.4.1. container
 ============================*/
 .book { 
-    z-index: 0;
-    position: absolute;
+	position: absolute;
+    z-index: 1;
     margin-top: -25rem;
     margin-left: 7rem;
 	width: 270px; 
@@ -631,8 +629,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .page,
 .page > li {
-    z-index: 0;
-	position: absolute;
 	top: 0;
 	left: 0;
 	-webkit-transform-style: preserve-3d;
@@ -641,17 +637,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page {
+	z-index: 0;
+	position: absolute;
 	width: 100%;
 	height: 98%;
 	top: 1%;
 	left: 3%;
-	z-index: 10;
 }
 
 .page > li {
 	width: 100%;
 	height: 100%;
-	-webkit-transform-origin: left center;
+	-webkit-transform-origin: left center ;
 	-moz-transform-origin: left center;
 	transform-origin: left center;
 	-webkit-transition-property: transform;
@@ -693,21 +690,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page > li:nth-child(2) 
-.content {
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 0.7em;
-    font-weight: 700;
-    padding: 0.1em 0.4em;
-    text-align: center;
-    -webkit-transition: color 0.3s, border-color 0.3s;
-    -moz-transition: color 0.3s, border-color 0.3s;
-    transition: color 0.3s, border-color 0.3s;
-}
-
-.page > li:nth-child(2) 
 img {
-    opacity: 1;
     margin-left: 5rem;
     margin-top: 7.5rem;
     width: 100px;
