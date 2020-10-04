@@ -9,12 +9,21 @@
 	2. Background
     
     3. Default page
-
+        3.1 Address
+        3.2 List Member
+            3.2.1 info
+        3.3 Image In HomePage
+        3.4 Animation Book
+            3.4.1 container
+            3.4.2 background & color
+            3.4.3. opening cover, back cover and pages
+            3.4.4. position, transform y transition
+            3.4.5. events
+            3.4.6. Bonus
+                3.4.6.1 Cover design
     4. Members page
 
 ===========================*/
-
-
 
 /*====================
 	1. General code
@@ -28,8 +37,6 @@ body {
     overflow: hidden;
 }
 
-
-
 /*----------------------
 	1.1. Typography
 ------------------------------*/
@@ -42,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #191919;
 }
 
-
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 /*====================
 	2. BackGround
@@ -58,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .back-ground
 .sub-right {
+    opacity: 1;
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
     max-width: 864px;
     width: 100%;
@@ -79,3 +87,748 @@ h1, h2, h3, h4, h5, h6 {
     background:#97F9E3; 
     position: absolute;
 }
+
+/*==============================
+    * Utility
+==============================*/
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+
+.clear {
+    clear: both;
+}
+
+/*==============================
+    3. Default page
+==============================*/
+
+.default-page {
+    padding-left: 8rem;
+    padding-top: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*=============================
+    3.1 Address
+==============================*/
+.default-page
+    .address {    
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.default-page
+    .address
+        p {    
+            padding-top: 1rem;
+            padding-left: 5rem;
+        }
+
+/*=============================
+    3.2 Title Homepage
+==============================*/    
+.default-page
+    .title-homepage {
+        padding-top: 2rem;
+    }
+
+.default-page
+    .title-homepage 
+        h1 {
+            font-size: 42pt;
+            font-weight: 700;
+        }
+
+
+/*=============================
+    3.3 List Members
+==============================*/  
+.default-page
+    .list-members{
+        padding-top: 4rem;
+    }
+
+.default-page
+    .list-members
+        h1 {
+        font-weight: bold;
+    }
+
+.default-page
+    .list-members
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+.default-page
+    .list-members
+        li {
+            padding-top: 2rem;
+        }
+
+.default-page
+    .list-members
+        img {
+            width: 75px;
+            height: 75px;
+        }
+
+.default-page
+    .list-members
+        .info {
+            line-height: 0.5rem;
+            padding-left: 6rem;
+        }
+
+.Tuan-info {
+    display: block;
+    opacity: 1;
+}
+
+.Thuc-info {
+    display: block;
+    opacity: 1;
+}
+
+.Thuan-info {
+    display: block;
+    opacity: 1;
+}
+
+/*===============================
+    3.4 Image-In-Homepage
+===============================*/
+.default-page 
+    .image-in-homepage
+        {
+            position: absolute;
+            z-index: 10;
+            padding-left: 63.5rem;
+        }
+
+.default-page
+    .image-in-homepage
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+.default-page
+    .image-in-homepage
+        .Tuan {
+            z-index: 10;
+            padding-top: 6.25rem;
+        }
+
+.default-page
+    .image-in-homepage
+        .Thuan {
+            margin-left: 11.5rem;
+            margin-top: -20rem;
+            z-index: 20;
+        }
+
+.default-page
+    .image-in-homepage
+        .Thuc {
+            margin-left: 19.5rem;
+            margin-top: -18rem;
+        }
+
+.default-page
+    .image-in-homepage
+        .bg-cover {
+            position: relative;
+            margin-left: -11rem;
+            margin-top: -6.5rem;
+        }
+
+.default-page
+    .image-in-homepage
+        .bg-cover  
+            img {
+                width: 810px;
+                height: 570px;
+            }
+
+.default-page
+    .image-in-homepage
+        .flag-man {
+            position: absolute;
+            z-index: 100;
+            margin-left: 17.5rem;
+            margin-top: -33rem;
+        }
+
+.default-page
+    .image-in-homepage
+        .flag-man  
+            img {
+                width: 354px;
+                height: 590px;
+            }
+
+/*============================
+    3.4 Animation Book
+============================*/
+
+/*===========================
+	3.4.1. container
+============================*/
+.book { 
+    z-index: 0;
+    position: absolute;
+    margin-top: -25rem;
+    margin-left: 7rem;
+	width: 270px; 
+	height: 360px;
+	-webkit-perspective: 900px;
+	-moz-perspective: 900px;
+	perspective: 900px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+/*===========================
+	3.4.2. Background & Color
+============================*/
+
+/* HARDCOVER FRONT */
+.hardcover_front li:first-child {
+	background-color: #eee;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/* reverse */
+.hardcover_front li:last-child {
+	background: #0d7037;
+}
+
+/* HARDCOVER BACK */
+.hardcover_back li:first-child {
+	background:#0d7037;
+}
+
+/* reverse */
+.hardcover_back li:last-child {
+	background:#0d7037;
+}
+
+.book_spine li:first-child {
+	background:  #023222;
+}
+.book_spine li:last-child {
+	background: #191919;
+}
+
+/* thickness of cover */
+
+.hardcover_front li:first-child:after,
+.hardcover_front li:first-child:before,
+.hardcover_front li:last-child:after,
+.hardcover_front li:last-child:before,
+.hardcover_back li:first-child:after,
+.hardcover_back li:first-child:before,
+.hardcover_back li:last-child:after,
+.hardcover_back li:last-child:before,
+.book_spine li:first-child:after,
+.book_spine li:first-child:before,
+.book_spine li:last-child:after,
+.book_spine li:last-child:before {
+	background: #999;
+}
+
+/* page */
+
+.page > li {
+    z-index: 1;
+    position: absolute;
+	background: -webkit-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+	background: -moz-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+	background: -ms-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+	background: linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+	box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1), inset -1px 0px 1px rgba(150, 150, 150, 0.2);
+	border-radius: 0px 5px 5px 0px;
+}
+
+/*==================================================
+	3.4.3. Opening cover, Back cover And Pages
+===================================================*/
+
+.hardcover_front {
+	-webkit-transform: rotateY(-30deg) translateZ(8px);
+	-moz-transform: rotateY(-30deg) translateZ(8px);
+	transform: rotateY(-30deg) translateZ(8px);
+	z-index: 100;
+}
+
+.hardcover_back {
+	-webkit-transform: rotateY(-15deg) translateZ(-8px);
+	-moz-transform: rotateY(-15deg) translateZ(-8px);
+	transform: rotateY(-15deg) translateZ(-8px);
+}
+
+.page li:nth-child(1) {
+	-webkit-transform: rotateY(-24deg);
+	-moz-transform: rotateY(-24deg);
+	transform: rotateY(-24deg);
+}
+
+.page li:nth-child(2) {
+	-webkit-transform: rotateY(-26deg);
+	-moz-transform: rotateY(-26deg);
+	transform: rotateY(-26deg);
+}
+
+.page li:nth-child(3) {
+	-webkit-transform: rotateY(-28deg);
+	-moz-transform: rotateY(-28deg);
+	transform: rotateY(-28deg);
+}
+
+.page li:nth-child(4) {
+	-webkit-transform: rotateY(-30deg);
+	-moz-transform: rotateY(-30deg);
+	transform: rotateY(-30deg);
+}
+
+.page li:nth-child(5) {
+	-webkit-transform: rotateY(-32deg);
+	-moz-transform: rotateY(-32deg);
+	transform: rotateY(-32deg);
+}
+
+/*==================================================
+	3.4.4. Position, Transform & Transition
+===================================================*/
+
+.hardcover_front,
+.hardcover_back,
+.book_spine,
+.hardcover_front li,
+.hardcover_back li,
+.book_spine li {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.hardcover_front,
+.hardcover_back {
+	-webkit-transform-origin: 0% 100%;
+	-moz-transform-origin: 0% 100%;
+	transform-origin: 0% 100%;
+}
+
+.hardcover_front {
+	-webkit-transition: all 0.8s ease, z-index 0.6s;
+	-moz-transition: all 0.8s ease, z-index 0.6s;
+	transition: all 0.8s ease, z-index 0.6s;
+}
+
+/* HARDCOVER front */
+.hardcover_front li:first-child {
+	cursor: default;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	-webkit-transform: translateZ(3px);
+	-moz-transform: translateZ(3px);
+	transform: translateZ(3px);
+}
+
+.hardcover_front li:last-child {
+	-webkit-transform: rotateY(180deg) translateZ(2px);
+	-moz-transform: rotateY(180deg) translateZ(2px);
+	transform: rotateY(180deg) translateZ(2px);
+}
+
+/* HARDCOVER back */
+.hardcover_back li:first-child {
+	-webkit-transform: translateZ(2px);
+	-moz-transform: translateZ(2px);
+	transform: translateZ(2px);
+}
+
+.hardcover_back li:last-child {
+	-webkit-transform: translateZ(-2px);
+	-moz-transform: translateZ(-2px);
+	transform: translateZ(-2px);
+}
+
+/* thickness of cover */
+.hardcover_front li:first-child:after,
+.hardcover_front li:first-child:before,
+.hardcover_front li:last-child:after,
+.hardcover_front li:last-child:before,
+.hardcover_back li:first-child:after,
+.hardcover_back li:first-child:before,
+.hardcover_back li:last-child:after,
+.hardcover_back li:last-child:before,
+.book_spine li:first-child:after,
+.book_spine li:first-child:before,
+.book_spine li:last-child:after,
+.book_spine li:last-child:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* HARDCOVER front */
+.hardcover_front li:first-child:after,
+.hardcover_front li:first-child:before {
+	width: 4px;
+	height: 100%;
+}
+
+.hardcover_front li:first-child:after {
+	-webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+	-moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+	transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+}
+
+.hardcover_front li:first-child:before {
+	-webkit-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+	-moz-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+	transform: rotateY(90deg) translateZ(158px) translateX(2px);
+}
+
+.hardcover_front li:last-child:after,
+.hardcover_front li:last-child:before {
+	width: 4px;
+	height: 160px;
+}
+
+.hardcover_front li:last-child:after {
+	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
+	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
+	transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
+}
+.hardcover_front li:last-child:before {
+	box-shadow: 0px 0px 30px 5px #333;
+	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
+	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
+	transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
+}
+
+/* thickness of cover */
+
+.hardcover_back li:first-child:after,
+.hardcover_back li:first-child:before {
+	width: 4px;
+	height: 100%;
+}
+
+.hardcover_back li:first-child:after {
+	-webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+	-moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+	transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+}
+.hardcover_back li:first-child:before {
+	-webkit-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+	-moz-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+	transform: rotateY(90deg) translateZ(158px) translateX(2px);
+}
+
+.hardcover_back li:last-child:after,
+.hardcover_back li:last-child:before {
+	width: 4px;
+	height: 160px;
+}
+
+.hardcover_back li:last-child:after {
+	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
+	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
+	transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
+}
+
+.hardcover_back li:last-child:before {
+	box-shadow: 10px -1px 80px 20px #666;
+	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
+	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
+	transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
+}
+
+/* BOOK SPINE */
+.book_spine {
+	-webkit-transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
+	-moz-transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
+	transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
+	width: 16px;
+    z-index: 1;
+    
+}
+
+.book_spine li:first-child {
+	-webkit-transform: translateZ(2px);
+	-moz-transform: translateZ(2px);
+    transform: translateZ(2px);
+    margin-left: -0.5rem;
+}
+
+.book_spine li:last-child {
+	-webkit-transform: translateZ(-2px);
+	-moz-transform: translateZ(-2px);
+    transform: translateZ(-2px);
+    margin-left: -0.5rem;
+    
+}
+
+/* thickness of book spine */
+.book_spine li:first-child:after,
+.book_spine li:first-child:before {
+	width: 40px;
+	height: 100%;
+}
+
+.book_spine li:first-child:after {
+	-webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+	-moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+	transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+}
+
+.book_spine li:first-child:before {
+	-webkit-transform: rotateY(-90deg) translateZ(-12px);
+	-moz-transform: rotateY(-90deg) translateZ(-12px);
+	transform: rotateY(-90deg) translateZ(-12px);
+}
+
+.book_spine li:last-child:after,
+.book_spine li:last-child:before {
+	width: 4px;
+	height: 16px;
+}
+
+.book_spine li:last-child:after {
+	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
+	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
+	transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
+}
+
+.book_spine li:last-child:before {
+	box-shadow: 5px -1px 100px 40px rgba(0, 0, 0, 0.2);
+	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
+	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
+	transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
+}
+
+.page,
+.page > li {
+    z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.page {
+	width: 100%;
+	height: 98%;
+	top: 1%;
+	left: 3%;
+	z-index: 10;
+}
+
+.page > li {
+	width: 100%;
+	height: 100%;
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	transform-origin: left center;
+	-webkit-transition-property: transform;
+	-moz-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
+.page > li:nth-child(1) {
+	-webkit-transition-duration: 0.6s;
+	-moz-transition-duration: 0.6s;
+	transition-duration: 0.6s;
+}
+
+.page > li:nth-child(2) {
+	-webkit-transition-duration: 0.6s;
+	-moz-transition-duration: 0.6s;
+	transition-duration: 0.6s;
+}
+
+.page > li:nth-child(3) {
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+
+.page > li:nth-child(4) {
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+
+.page > li:nth-child(5) {
+	-webkit-transition-duration: 0.6s;
+	-moz-transition-duration: 0.6s;
+	transition-duration: 0.6s;
+}
+
+.page > li:nth-child(2) 
+.content {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 700;
+    padding: 0.1em 0.4em;
+    text-align: center;
+    -webkit-transition: color 0.3s, border-color 0.3s;
+    -moz-transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.page > li:nth-child(2) 
+img {
+    opacity: 1;
+    margin-left: 5rem;
+    margin-top: 7.5rem;
+    width: 100px;
+    height: 100px
+}
+
+
+/*============================
+	3.4.5. Events
+=============================*/
+.Thuan-info:hover ~ .default-page .image-in-homepage .book > .hardcover_front,
+.Thuc-info:hover ~ .default-page .image-in-homepage .book > .hardcover_front,
+.Tuan-info:hover ~ .default-page .image-in-homepage .book > .hardcover_front,
+.book:hover > .hardcover_front {
+	-webkit-transform: rotateY(-145deg) translateZ(0);
+	-moz-transform: rotateY(-145deg) translateZ(0);
+	transform: rotateY(-145deg) translateZ(0);
+	z-index: 0;
+}
+
+.Thuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(1),
+.Thuc-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(1),
+.Tuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(1),
+.book:hover > .page li:nth-child(1) {
+	-webkit-transform: rotateY(-30deg);
+	-moz-transform: rotateY(-30deg);
+	transform: rotateY(-30deg);
+	-webkit-transition-duration: 1.5s;
+	-moz-transition-duration: 1.5s;
+    transition-duration: 1.5s;
+}
+
+.Thuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(2),
+.Thuc-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(2),
+.Tuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(2),
+.book:hover > .page li:nth-child(2) {
+	-webkit-transform: rotateY(-35deg);
+	-moz-transform: rotateY(-35deg);
+	transform: rotateY(-35deg);
+	-webkit-transition-duration: 1.8s;
+	-moz-transition-duration: 1.8s;
+	transition-duration: 1.8s;
+}
+
+.Thuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(3),
+.Thuc-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(3),
+.Tuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(3),
+.book:hover > .page li:nth-child(3) {
+	-webkit-transform: rotateY(-118deg);
+	-moz-transform: rotateY(-118deg);
+	transform: rotateY(-118deg);
+	-webkit-transition-duration: 1.6s;
+	-moz-transition-duration: 1.6s;
+	transition-duration: 1.6s;
+}
+
+.Thuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(4),
+.Thuc-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(4),
+.Tuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(4),
+.book:hover > .page li:nth-child(4) {
+	-webkit-transform: rotateY(-130deg);
+	-moz-transform: rotateY(-130deg);
+	transform: rotateY(-130deg);
+	-webkit-transition-duration: 1.4s;
+	-moz-transition-duration: 1.4s;
+	transition-duration: 1.4s;
+}
+
+.Thuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(5),
+.Thuc-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(5),
+.Tuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(5),
+.book:hover > .page li:nth-child(5) {
+	-webkit-transform: rotateY(-140deg);
+	-moz-transform: rotateY(-140deg);
+	transform: rotateY(-140deg);
+	-webkit-transition-duration: 1.2s;
+	-moz-transition-duration: 1.2s;
+	transition-duration: 1.2s;
+}
+
+/*============================
+	3.4.6. Bonus
+=============================*/
+
+/* cover CSS */
+.coverDesign {
+    background-color: #c2ffcc;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+    z-index: 1;
+    overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.coverDesign
+p {
+    padding-top: 5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.coverDesign
+img {
+    margin-left: 2rem;
+    width: 195px;
+    height: 121px;
+}
+
+.coverDesign::after {
+	background-image: -webkit-linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+	background-image: -moz-linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+    background-image: linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+	position: relative;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
