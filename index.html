@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Test</title>
+        <title>Phát triển ứng dụng web 18_31</title>
         <link rel="stylesheet" href="default.css">
         <link rel="icon" type="icon" href="images/favicon.ico" />
     </head>
     <body>
-        <div class="default-page">
+        <div class="header-page">
             <!-- Address -->
-            <div id="address">
-                <img id="left" src="images/logo-web.png"/>
-                <p>ltweb18311.glitch.com</p>
+            <div class="page-address">
+                <a href="./index.html">
+                    <img class="logo-web" src="images/logo-web.png"/>
+                    <p>ltweb18311.glitch.com</p>
+                </a>
             </div>
 
             <!-- Title homepage -->
-            <div id="title-homepage">
+            <div class="title-page">
                 <h1>PHÁT TRIỂN ỨNG DỤNG WEB</h1>
             </div>
             
             <!-- Title List Member-->
-            <div id="title-list-members">
+            <div class="title-list-members">
                 <h1>Thông tin thành viên nhóm:</h1>
             </div>
             
             <!-- Member 1 -->
             <div class="Thuan-info">
                 <div class="avt">
-                    <a href="https://www.facebook.com/th.coconut">
-                        <img src="images/profile.png">
+                    <a href="members/18120583/18120583.html">
+                        <img src="members/18120583/images/thuan-avt.png">
                     </a>
                 </div>
                 <div class="member-detail">
@@ -39,7 +41,9 @@
             <!-- Member 2 -->
             <div class="Thuc-info">
                 <div class="avt">
-                    <img src="images/profile.png">
+                    <a href="members/18120585/18120585.html">
+                        <img src="members/18120585/images/thuc-avt.png">
+                     </a>
                 </div>
                 <div class="member-detail">
                     <p>Triệu Mai Ngọc Thức</p>
@@ -50,7 +54,9 @@
             <!-- Member 3 -->
             <div class="Tuan-info">
                 <div class="avt">
-                    <img src="images/profile.png">
+                    <a href="members/18120632/18120632.html">
+                        <img src="members/18120632/images/tuan-avt.png">
+                    </a>
                 </div>
                 <div class="member-detail">
                     <p>Lê Nhật Tuấn</p>
@@ -64,17 +70,27 @@
                 <img src="images/bg-cover.png">
             </div>
 
+            <!-- Team image -->
             <div class="image-in-homepage">
                 <div class="Tuan">
-                    <img src="images/tuan-cover.png">
+                    <img src="members/18120632/images/tuan-cover.png" usemap="#tuan-img-map">
+                    <map name="tuan-img-map">
+                        <area shape="rect" coords="60, 20, 120, 100" href="members/18120632/18120632.html"/>
+                    </map>
                 </div>
 
                 <div class="Thuan">
-                    <img src="images/thuan-cover.png">
+                    <img src="members/18120583/images/thuan-cover.png" usemap="#thuan-img-map">
+                    <map name="thuan-img-map">
+                        <area shape="rect" coords="40, 30, 100, 100" href="members/18120583/18120583.html"/>
+                    </map>
                 </div>
                     
                 <div class="Thuc">
-                    <img src="images/thuc-cover.png">
+                    <img src="members/18120585/images/thuc-cover.png" usemap="#thuc-img-map">
+                    <map name="thuc-img-map">
+                        <area shape="rect" coords="70, 10, 160, 100" href="members/18120585/18120585.html"/>
+                    </map>
                 </div>
             </div>
 
