@@ -13,7 +13,7 @@
         3.1. Address
         3.2. Title homepage
         3.3. List member
-        3.4. Background cover and Image in home page
+        3.4. Background cover and Team image
         3.5. Animation book
             3.5.1. Book container
             3.5.2. Book's background and color
@@ -259,29 +259,35 @@ p {
     margin-left: 80px;
 }
 
+.Thuan-image:hover ~ .book .page > li .member-info-in-bookpage::before,
 .Thuan-info:hover ~ .book .page > li .member-info-in-bookpage::before {
     content: "Trương Quốc Thuận";  
 }
 
+.Thuc-image:hover ~ .book .page > li .member-info-in-bookpage::before,
 .Thuc-info:hover ~ .book .page > li .member-info-in-bookpage::before {
     content: "Triệu Mai Ngọc Thức";
 }
 
+.Tuan-image:hover ~ .book .page > li .member-info-in-bookpage::before,
 .Tuan-info:hover ~ .book .page > li .member-info-in-bookpage::before {
     content: "Lê Nhật Tuấn";
     margin-left: 30px;
 }
 
+.Thuan-image:hover ~ .book .page > li .img-in-bookpage,
 .Thuan-info:hover ~ .book .page > li .img-in-bookpage {
     content: url(members/18120583/images/thuan-avt.png);
     border-radius: 50%;
 }
 
+.Thuc-image:hover ~ .book .page > li .img-in-bookpage,
 .Thuc-info:hover ~ .book .page > li .img-in-bookpage {
     content: url(members/18120585/images/thuc-avt.png);
     border-radius: 50%;
 }
 
+.Tuan-image:hover ~ .book .page > li .img-in-bookpage,
 .Tuan-info:hover ~ .book .page > li .img-in-bookpage {
     content: url(members/18120632/images/tuan-avt.png);
     border-radius: 50%;
@@ -290,41 +296,30 @@ p {
 
 
 /*----------------------
-	3.4. Background cover and Image in home page
+	3.4. Background cover and Team image
 ------------------------------*/
 
-.image-in-homepage
-{
+.Tuan-image {
 	position: absolute;
 	z-index: 10;
-	top: 20px;
-	right: 200px;
-}
-
-
-.image-in-homepage
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-.Tuan {
-	z-index: 10;
-    padding-top: 100px;
+    right: 480px;
+    top: 100px;
     animation: anim-float-left ease-in-out 1.5s;
 }
 
-.Thuan {
-	margin-left: 184px;
-	margin-top: -320px;
-    z-index: 20;
+.Thuan-image {
+	right: 350px;
+    top: 60px;
+    position: absolute;
+    z-index: 10;
     animation: anim-float-in ease-in-out 1.5s;
 }
 
-.Thuc {
-	margin-left: 312px;
-    margin-top: -288px;
+.Thuc-image {
+    position: absolute;
+    z-index: 10 ;
+	right: 180px;
+    top: 80px;
     animation: anim-float-out ease-in-out 1.5s;
 }
 
@@ -353,7 +348,7 @@ p {
 		width: 360px;
 		height: 600px;
     }
-       
+
 
 
 /*==============================
@@ -805,11 +800,14 @@ img {
 }
 
 .book:hover .page > li .member-info-in-bookpage::before{
-	content: "Chọn ảnh đại diện thành viên để xem thông tin chi tiết.";
+	content: "Nhấn vào mặt hoặc avatar thành viên để xem thông tin chi tiết.";
 	font-size: 1rem;
 	text-align: center;
 }
 
+.Thuan-image:hover ~ .book > .hardcover-front,
+.Thuc-image:hover ~ .book > .hardcover-front,
+.Tuan-image:hover ~ .book > .hardcover-front,
 .Thuan-info:hover ~ .book > .hardcover-front,
 .Thuc-info:hover ~ .book > .hardcover-front,
 .Tuan-info:hover ~ .book > .hardcover-front,
@@ -820,6 +818,9 @@ img {
 	z-index: 0;
 }
 
+.Thuan-image:hover ~ .book .page > li:nth-child(1),
+.Thuc-image:hover ~ .book .page > li:nth-child(1),
+.Tuan-image:hover ~ .book .page > li:nth-child(1),
 .Thuan-info:hover ~ .book .page > li:nth-child(1),
 .Thuc-info:hover ~ .book .page > li:nth-child(1),
 .Tuan-info:hover ~ .book .page > li:nth-child(1),
@@ -832,6 +833,9 @@ img {
     transition-duration: 1.5s;
 }
 
+.Thuan-image:hover ~ .book .page > li:nth-child(2),
+.Thuc-image:hover ~ .book .page > li:nth-child(2),
+.Tuan-image:hover ~ .book .page > li:nth-child(2),
 .Thuan-info:hover ~ .book .page > li:nth-child(2),
 .Thuc-info:hover ~ .book .page > li:nth-child(2),
 .Tuan-info:hover ~ .book .page > li:nth-child(2),
@@ -844,6 +848,9 @@ img {
 	transition-duration: 1.8s;
 }
 
+.Thuan-image:hover ~ .book .page > li:nth-child(3),
+.Thuc-image:hover ~ .book .page > li:nth-child(3),
+.Tuan-image:hover ~ .book .page > li:nth-child(3),
 .Thuan-info:hover ~ .book .page > li:nth-child(3),
 .Thuc-info:hover ~ .book .page > li:nth-child(3),
 .Tuan-info:hover ~ .book .page > li:nth-child(3),
@@ -856,6 +863,9 @@ img {
 	transition-duration: 1.6s;
 }
 
+.Thuan-image:hover ~ .book .page > li:nth-child(4),
+.Thuc-image:hover ~ .book .page > li:nth-child(4),
+.Tuan-image:hover ~ .book .page > li:nth-child(4),
 .Thuan-info:hover ~ .book .page > li:nth-child(4),
 .Thuc-info:hover ~ .book .page > li:nth-child(4),
 .Tuan-info:hover ~ .book .page > li:nth-child(4),
@@ -868,6 +878,9 @@ img {
 	transition-duration: 1.4s;
 }
 
+.Thuan-image:hover ~ .book .page > li:nth-child(5),
+.Thuc-image:hover ~ .book .page > li:nth-child(5),
+.Tuan-image:hover ~ .book .page > li:nth-child(5),
 .Thuan-info:hover ~ .book .page > li:nth-child(5),
 .Thuc-info:hover ~ .book .page > li:nth-child(5),
 .Tuan-info:hover ~ .book .page > li:nth-child(5),
