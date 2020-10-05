@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #191919;
 }
 
-/*====================
+/*=========================
 	2. BackGround
 ==========================*/
 
@@ -216,8 +216,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .member-info-in-bookpage {
-    position: relative;
-    margin-left: 50px;
+    position: absolute;
+	padding-left: 50px;
+	padding-right: 60px;
     margin-top: 30px;
     color: #191919;
     font-weight: 500;
@@ -259,12 +260,12 @@ h1, h2, h3, h4, h5, h6 {
     3.4 Image-In-Homepage
 ===============================*/
 .image-in-homepage
-	{
-		position: absolute;
-		z-index: 10;
-        top: 20px;
-        right: 200px;
-	}
+{
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 200px;
+}
 
 
 .image-in-homepage
@@ -276,20 +277,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .Tuan {
 	z-index: 10;
-	padding-top: 6.25rem;
+	padding-top: 100px;
 }
 
-
-
 .Thuan {
-	margin-left: 11.5rem;
-	margin-top: -20rem;
+	margin-left: 184px;
+	margin-top: -320px;
 	z-index: 20;
 }
 
 .Thuc {
-	margin-left: 19.5rem;
-	margin-top: -18rem;
+	margin-left: 312px;
+	margin-top: -288px;
 }
 
 .bg-cover {
@@ -566,6 +565,7 @@ h1, h2, h3, h4, h5, h6 {
 	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
 	transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
 }
+
 .hardcover-front li:last-child:before {
 	box-shadow: 0px 0px 30px 5px #333;
 	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
@@ -625,14 +625,14 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-transform: translateZ(2px);
 	-moz-transform: translateZ(2px);
     transform: translateZ(2px);
-    margin-left: -0.5rem;
+    margin-left: -8px;
 }
 
 .book-spine li:last-child {
 	-webkit-transform: translateZ(-2px);
 	-moz-transform: translateZ(-2px);
     transform: translateZ(-2px);
-    margin-left: -0.5rem;
+    margin-left: -8px;
     
 }
 
@@ -739,8 +739,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .page > li:nth-child(2) 
 img {
-    margin-left: 5rem;
-    margin-top: 7.5rem;
+    margin-left:80px;
+    margin-top: 120px;
     width: 100px;
     height: 100px
 }
@@ -753,8 +753,9 @@ img {
 }
 
 .book:hover .page > li .member-info-in-bookpage::before{
-    content: "Chọn thành viên để xem thông tin chi tiết";
-    font-size: 1rem;
+	content: "Chọn thành viên để xem thông tin chi tiết";
+	font-size: 1rem;
+	text-align: center;
 }
 
 .Thuan-info:hover ~ .book > .hardcover-front,
@@ -848,14 +849,14 @@ img {
 
 .cover-design
 p {
-    padding-top: 4.5rem;
+    padding-top: 72px;
     text-align: center;
     font-weight: 700;
 }
 
 .cover-design
 img {
-    margin-left: 2rem;
+    margin-left: 32px;
     width: 195px;
     height: 121px;
 }
