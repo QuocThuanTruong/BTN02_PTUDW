@@ -112,8 +112,11 @@ h1, h2, h3, h4, h5, h6 {
 ==============================*/
 .default-page {
     padding-left: 128px;
-	padding-top: 48px;
-
+    padding-top: 48px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -169,7 +172,17 @@ h1, h2, h3, h4, h5, h6 {
 	max-width: 300px;
     grid-template-columns: 80px auto;
 	align-items: center;
-	line-height: 10px;
+    line-height: 10px;
+    position: absolute;
+    z-index: 20;
+}
+
+.Thuc-info {
+    margin-top: 110px;
+}
+
+.Tuan-info {
+    margin-top: 220px;
 }
 
 .Thuan-info .avt img,
@@ -202,6 +215,46 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-end: 2;
 }
 
+.member-info-in-bookpage {
+    position: relative;
+    margin-left: 50px;
+    margin-top: 30px;
+    color: #191919;
+    font-weight: 500;
+}
+
+.img-in-bookpage {
+    width: 100px !important;
+    height: 100px !important;
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+.Thuan-info:hover ~ .book .page > li .member-info-in-bookpage::before {
+    content: "Trương Quốc Thuận";  
+}
+
+.Thuc-info:hover ~ .book .page > li .member-info-in-bookpage::before {
+    content: "Triệu Mai Ngọc Thức";
+}
+
+.Tuan-info:hover ~ .book .page > li .member-info-in-bookpage::before {
+    content: "Lê Nhật Tuấn";
+    margin-left: 30px;
+}
+
+.Thuan-info:hover ~ .book .page > li .img-in-bookpage {
+    content: url(./images/profile.png);
+}
+
+.Thuc-info:hover ~ .book .page > li .img-in-bookpage {
+    content: url(./images/profile.png);
+}
+
+.Tuan-info:hover ~ .book .page > li .img-in-bookpage {
+    content: url(./images/profile.png);
+}
+
 /*===============================
     3.4 Image-In-Homepage
 ===============================*/
@@ -209,8 +262,8 @@ h1, h2, h3, h4, h5, h6 {
 	{
 		position: absolute;
 		z-index: 10;
-		padding-left: 63.5rem;
-		margin-top: -650px;
+        top: 20px;
+        right: 200px;
 	}
 
 
@@ -240,9 +293,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-cover {
-	position: relative;
-	margin-left: -11rem;
-	margin-top: -6.5rem;
+    position: absolute;
+    z-index: 11;
+    bottom: 140px;
+    right: 85px;
 }
 
 .bg-cover  
@@ -252,11 +306,10 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 .flag-man {
-	z-index: 100;
-	position: absolute;
-	
-	margin-left: 80rem;
-	margin-top: -22rem;
+	z-index: 15;
+    position: absolute;
+    bottom: 80px;
+    right: 90px;
 }
 
 .flag-man  
@@ -275,8 +328,8 @@ h1, h2, h3, h4, h5, h6 {
 .book { 
 	position: absolute;
     z-index: 12;
-    margin-top: -16rem;
-    margin-left: 69.5rem;
+    bottom: 164px;
+    right: 320px;
 	width: 270px; 
 	height: 360px;
 	-webkit-perspective: 900px;
@@ -695,6 +748,15 @@ img {
 /*============================
 	3.4.5. Events
 =============================*/
+.book:hover .page > li .img-in-bookpage{
+    content: url(./images/logo-uni.png);
+}
+
+.book:hover .page > li .member-info-in-bookpage::before{
+    content: "Chọn thành viên để xem thông tin chi tiết";
+    font-size: 1rem;
+}
+
 .Thuan-info:hover ~ .book > .hardcover-front,
 .Thuc-info:hover ~ .book > .hardcover-front,
 .Tuan-info:hover ~ .book > .hardcover-front,
@@ -705,9 +767,9 @@ img {
 	z-index: 0;
 }
 
-.Thuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(1),
-.Thuc-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(1),
-.Tuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(1),
+.Thuan-info:hover ~ .book .page > li:nth-child(1),
+.Thuc-info:hover ~ .book .page > li:nth-child(1),
+.Tuan-info:hover ~ .book .page > li:nth-child(1),
 .book:hover > .page li:nth-child(1) {
 	-webkit-transform: rotateY(-30deg);
 	-moz-transform: rotateY(-30deg);
@@ -717,9 +779,9 @@ img {
     transition-duration: 1.5s;
 }
 
-.Thuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(2),
-.Thuc-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(2),
-.Tuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(2),
+.Thuan-info:hover ~ .book .page > li:nth-child(2),
+.Thuc-info:hover ~ .book .page > li:nth-child(2),
+.Tuan-info:hover ~ .book .page > li:nth-child(2),
 .book:hover > .page li:nth-child(2) {
 	-webkit-transform: rotateY(-35deg);
 	-moz-transform: rotateY(-35deg);
@@ -729,9 +791,9 @@ img {
 	transition-duration: 1.8s;
 }
 
-.Thuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(3),
-.Thuc-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(3),
-.Tuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(3),
+.Thuan-info:hover ~ .book .page > li:nth-child(3),
+.Thuc-info:hover ~ .book .page > li:nth-child(3),
+.Tuan-info:hover ~ .book .page > li:nth-child(3),
 .book:hover > .page li:nth-child(3) {
 	-webkit-transform: rotateY(-118deg);
 	-moz-transform: rotateY(-118deg);
@@ -741,9 +803,9 @@ img {
 	transition-duration: 1.6s;
 }
 
-.Thuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(4),
-.Thuc-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(4),
-.Tuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(4),
+.Thuan-info:hover ~ .book .page > li:nth-child(4),
+.Thuc-info:hover ~ .book .page > li:nth-child(4),
+.Tuan-info:hover ~ .book .page > li:nth-child(4),
 .book:hover > .page li:nth-child(4) {
 	-webkit-transform: rotateY(-130deg);
 	-moz-transform: rotateY(-130deg);
@@ -753,9 +815,9 @@ img {
 	transition-duration: 1.4s;
 }
 
-.Thuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(5),
-.Thuc-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(5),
-.Tuan-info:hover ~ .default-page .image-in-homepage .book > .page li:nth-child(5),
+.Thuan-info:hover ~ .book .page > li:nth-child(5),
+.Thuc-info:hover ~ .book .page > li:nth-child(5),
+.Tuan-info:hover ~ .book .page > li:nth-child(5),
 .book:hover > .page li:nth-child(5) {
 	-webkit-transform: rotateY(-140deg);
 	-moz-transform: rotateY(-140deg);
