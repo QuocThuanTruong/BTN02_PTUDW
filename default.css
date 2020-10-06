@@ -28,7 +28,11 @@
         4.4. Avatar
         4.4. Button home
 
-    5. Animation define
+	5. Animation define
+	
+	6. Media
+		6.1. Default page
+		6.2. Members page
 ===========================*/
 
 /*====================
@@ -253,8 +257,8 @@ p {
 }
 
 .img-in-bookpage {
-    width: 100px !important;
-    height: 100px !important;
+    width: 100px ;
+    height: 100px ;
     margin-top: 100px;
     margin-left: 80px;
 }
@@ -1091,4 +1095,213 @@ li {
    from { transform: translate(0,  0px); }
     50%  { transform: translate(0, 12px); }
     to   { transform: translate(0, 0px); }     
+}
+
+
+
+/*====================
+	6. Media
+==========================*/
+
+/*----------------------
+	6.1. Default page
+------------------------------*/
+
+@media only screen and (max-width: 1600px) {
+	.page-address
+	p {    
+		font-size: 1.2rem;
+		margin-left: -20px;
+	}
+
+	.logo-web {
+		width: 45px;
+		height: 45px;
+		margin-top: 4px;
+	}
+
+	.title-page 
+	h1 {
+		font-size: 2.5rem !important;
+		margin-top: 10px
+	}
+
+	.member-name h1,
+	.title-list-members h1 {
+		font-size: 1.5rem !important;
+		margin-top: -10px;
+	}
+
+	.Thuc-info {
+		margin-top: 90px !important;
+	}
+
+	.Tuan-info {
+		margin-top: 180px !important;
+	}
+
+	.Thuan-info .avt img,
+	.Thuc-info .avt img,
+	.Tuan-info .avt img {
+		width: 60px !important;
+		height: 60px !important;
+	}
+
+	
+	.Thuan-info .member-detail,
+	.Thuc-info .member-detail,
+	.Tuan-info .member-detail {
+		font-size: 0.9rem !important;
+		margin-left: 5px !important;
+	}
+
+
+	.flag-man {
+		right: 100px !important;
+	}
+
+	.flag-man  
+	img {
+		width: 225px !important;
+		height: 375px !important;
+	}
+	
+	
+	.Thuan-image img, 
+	.Thuc-image img,
+	.Tuan-image img {
+		width: 80% !important;
+		height: 80% !important;
+		margin-top: 10px !important;
+		margin-right: 20px !important;
+	}
+
+	.Thuan-image {
+		right: 250px !important;
+	}
+
+	.Thuc-image {
+		right: 100px !important;
+	}
+
+	.Tuan-image {
+		right: 350px !important;
+	}
+	
+	.book { 
+		width: 202px !important; 
+		height: 270px !important;
+		right: 250px !important;
+		bottom: 150px !important;
+	}
+
+	.cover-design
+	p {
+		font-size: 0.6rem !important;
+		margin-top: -10px !important;
+	}
+
+	.cover-design
+	img {
+		width: 150px !important;
+		height: 85px !important;
+		margin-top: 40px !important;
+	}
+
+	.img-in-bookpage {
+		width: 60px !important;
+		height: 60px !important;
+		margin-top: 60px !important;
+		margin-left: 70px !important;
+	}
+
+	.member-info-in-bookpage::before {
+		font-size: 0.6rem !important;
+		margin-left: 5px !important;
+	}
+
+	.Thuan-image:hover ~ .book .page > li .member-info-in-bookpage::before,
+	.Thuan-info:hover ~ .book .page > li .member-info-in-bookpage::before {
+		content: "Trương Quốc Thuận";  
+		margin-left: 0px !important;
+	}
+
+	.Thuc-image:hover ~ .book .page > li .member-info-in-bookpage::before,
+	.Thuc-info:hover ~ .book .page > li .member-info-in-bookpage::before {
+		content: "Triệu Mai Ngọc Thức";
+		margin-left: 0px !important;
+	}
+
+	.Tuan-image:hover ~ .book .page > li .member-info-in-bookpage::before,
+	.Tuan-info:hover ~ .book .page > li .member-info-in-bookpage::before {
+		content: "Lê Nhật Tuấn";
+		margin-left: 20px !important;
+	}
+
+	.bg-cover
+	img {
+		width: 600px !important; 
+		height: 360px !important;
+	}
+
+
+
+/*----------------------
+	6.2. Members page
+------------------------------*/
+
+	.detail-info p {
+		font-size: 0.9rem !important;
+	}
+
+	.detail-info 
+	ul 
+	li {
+		height: 60% !important;
+		margin-bottom: 15px !important;
+	}
+
+	.ic-content {
+		width: 60% !important;
+	}
+
+	.detail-content {
+		margin-left: 20px !important;
+	}
+
+
+	.avatar
+	.avatar-content {
+		width: 400px !important;
+		height: 400px !important;
+		top: 210px !important;
+	}
+
+	.avatar
+	.avatar-ribbon {
+		width: 240px !important;
+		height: 260px !important;
+		top: 380px !important;
+		right: 240px !important;
+	}
+
+	.btn-home {
+		width: 160px !important;
+		height: 57px !important;
+		font-size: 1.8rem !important;
+		border-radius: 17px !important;
+	}
+	
+	.back-ground
+	.sub-right {
+		width: 45% !important;
+		height: 100%;
+	}
+	
+	.back-ground
+	.sub-left {
+		width: 45% !important;
+		height: 100%;
+	}
+
 }
